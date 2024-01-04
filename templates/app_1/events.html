@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% block content %} {% for e in events %}
+<p>eventname--{{e.name}}</p>
+<p>max_number_of_participant--{{e.max_number_of_participant}}</p>
+<p>event_catogry--{{e.event_catogry}}</p>
+<p>event_location--{{e.event_location}}</p>
+
+{% endfor %} {% endblock content %}

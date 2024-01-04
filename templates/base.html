@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{%load static %}
+<link rel="stylesheet" href="{% static 'admin/css/style.css' %}">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Website Title</title>
+    <!-- Add your CSS styles or external stylesheet link here -->
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav {
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #333;
+        overflow-x: hidden;
+        padding-top: 20px;
+      }
+
+      nav a {
+        padding: 15px 15px 15px 30px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #333;
+        display: block;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #f1f1f1;
+      }
+
+      .content {
+        margin-left: 250px;
+        padding: 16px;
+        padding-bottom: 60px; /* Adjust this value based on the height of your footer */
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>School Event Site</h1>
+    </header>
+
+    <nav>
+      <a href=" {% url 'index' %}">Home</a>
+      <a href=" {% url 'about' %}">About</a>
+      <!-- Add more navigation links as needed -->
+    </nav>
+
+    <div class="content">
+      <!-- Add your content here -->
+      <h2>Main Content Area</h2>
+      <p>This is where your main content goes.</p>
+      {%block content%} 
+      {%endblock content%}
+    </div>
+
+    <footer>
+      <p>&copy; 2023 School Event Site. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
